@@ -1,0 +1,46 @@
+CREATE DATABASE hw_student;
+
+USE hw_student;
+
+CREATE TABLE students_data(
+roll_no INT NOT NULL AUTO_INCREMENT,
+first_name VARCHAR(30) NOT NULL DEFAULT 'UNKNOWN',
+last_name VARCHAR(30) NULL,
+class_rank INT NOT NULL,
+PRIMARY KEY (roll_no)
+);
+
+DESC students_data;
+
+INSERT INTO students_data(roll_no, first_name, last_name, class_rank)
+VALUES
+(1,'Kavita','Gupta',17),
+(2,'Vidya','Balan',3),
+(3,'Nidhi','Sharma',27),
+(4,'Riya','Kumar',12),
+(11,'Harshita','Mehra',4),
+(12,'Avni','Chaturvedi',5),
+(13,'Nidhi','KUmari',8),
+(14,'Pawan','Kumar',10);
+
+INSERT INTO students_data(roll_no,first_name, class_rank)
+VALUES
+(5,'Drishti',7),
+(6,'Samiksha',1),
+(7,'Poornima',6),
+(8,'Kavya',25);
+
+INSERT INTO students_data(roll_no,class_rank)
+VALUES
+(9,2),
+(10,15);
+
+SELECT * FROM students_data;
+
+SELECT roll_no, first_name, class_rank FROM students_data;
+
+SELECT roll_no AS 'Roll Number',
+first_name AS 'First Name',
+last_name AS 'Last Name',
+class_rank AS 'Rank'
+FROM students_data;

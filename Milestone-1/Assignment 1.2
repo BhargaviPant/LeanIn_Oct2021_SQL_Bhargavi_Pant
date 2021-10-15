@@ -1,0 +1,34 @@
+USE hw_student;
+
+CREATE TABLE teachers(
+id_no INT AUTO_INCREMENT,
+Name VARCHAR(60) NOT NULL DEFAULT 'UNKNOWN USER',
+Address VARCHAR(100) NULL,
+Age INT NOT NULL,
+PRIMARY KEY(id_no)
+);
+
+INSERT INTO teachers(id_no, Name, Address, Age)
+VALUES
+(1,'Priety Goel','Shimla Road, Himachal Pradesh',35),
+(2,'Sunil Kumar Verma','Lodhi Road, New Delhi',28),
+(3,'Priyanka', 'Tonk, Rajasthan',31);
+
+INSERT INTO teachers(id_no, Name)
+VALUES
+(4,'Anshika kapoor');
+
+INSERT INTO teachers(id_no,Address,Age)
+VALUES
+(5,'Dwarka, Delhi',25),
+(6,'Tonk, Rajasthan',38);
+
+INSERT INTO teachers(id_no,Name,Age)
+VALUES
+(7,'Sakshi',28),
+(8,'Sangam Jha',31);
+
+SELECT * FROM teachers;
+
+DROP TABLE teachers, students_data;
+DROP DATABASE hw_student;
