@@ -87,3 +87,14 @@ SELECT * FROM users
 ORDER BY created_at
 LIMIT 5;
 
+SELECT COUNT (DISTINCT DAYOFWEEK(created_at)) FROM users;
+
+SELECT u.username,p.user_id FROM user u INNER JOIN 
+photos p on u.id=p.user_id where image_url is null;
+
+select max(count) from (select photo_id,count(photo_id) mycount
+From likes Group by photo_id);
+
+select tag_name,count(tag_name) from tags group by tag_name limit 5;
+
+select username from users u inner join comments c on u.id =c.user_id where c.comment_text is null;
